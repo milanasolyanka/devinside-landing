@@ -5,6 +5,7 @@ import "./App.scss";
 
 import { Header } from "./components/Header";
 import { ButtonBlue } from "./components/UI/ButtonBlue";
+import { TechnologyCard } from "./components/TechnologyCard";
 
 function App() {
   return (
@@ -72,8 +73,43 @@ function App() {
       <div className="technologySection">
         <div className="technologySection-title">Наш стек технологий</div>
         <div className="technologySection-cards">
-          {/* Три технолоджи карды */}
+          <div className="cards-container">
+            <TechnologyCard
+              title="Клиентская часть"
+              content={["Typescript", "ReactJS", "SASS", "Effector"]}
+              picture="/technology-frontend.png"
+            />
+            <TechnologyCard
+              title="Серверная часть"
+              content={[
+                "Python",
+                "Django",
+                "Fast API",
+                "Celery",
+                "RabbitMQ",
+                "Redis",
+                "PostgreSQL",
+              ]}
+              picture="/technology-backend.png"
+            />
+            <TechnologyCard
+              title="Machine learning"
+              content={[
+                "Tensorflow v2.x",
+                "Keras",
+                "Pandas",
+                "Scikit-Learn",
+                "Numpy",
+                "Matplotlib",
+                "Seaborn",
+              ]}
+              picture="/technology-machine-learning.png"
+            />
+          </div>
         </div>
+      </div>
+      <div className="stripWrapper">
+        <div className="strip"></div>
       </div>
     </div>
   );

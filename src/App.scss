@@ -223,6 +223,17 @@
     justify-content: center;
   }
   .technologySection-cards {
-    display: inline;
+    display: flex;
+    justify-content: center;
+
+    margin: 12px 0;
+
+    .cards-container {
+      display: flex;
+      justify-content: space-evenly;
+      width: 100%;
+      max-width: 1200px;
+      flex-wrap: wrap;
+    }
   }
 }

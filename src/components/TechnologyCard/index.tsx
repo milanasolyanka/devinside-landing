@@ -1,5 +1,5 @@
 import React from "react";
-import "./technologyCard.css";
+import "./technologyCard.scss";
 
 interface ITechnologyCard {
   picture: string;
@@ -14,14 +14,14 @@ export const TechnologyCard: React.FC<ITechnologyCard> = ({
 }) => {
   return (
     <div className="technologyCard">
-      <div className="cardPicture">
+      <div className="technologyCard-container">
         <img src={picture} alt="Логотип"></img>
-      </div>
-      <div className="cardTitle">{title}</div>
-      <div className="cardContent">
-        {content.map((techElement) => (
-          <div className="techElement">{techElement}</div>
-        ))}
+        <div className="cardTitle">{title}</div>
+        <div className="cardContent">
+          {content.map((techElement) => (
+            <div className="techElement">{techElement}</div>
+          ))}
+        </div>
       </div>
     </div>
   );

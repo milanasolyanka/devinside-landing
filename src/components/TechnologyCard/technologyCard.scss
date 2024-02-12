@@ -1,16 +1,39 @@
+@import "./../../assets/colors.scss";
+@import "./../../assets/textStyles.scss";
+
 .technologyCard {
   width: 360px;
   height: 345px;
 
-  background-color: $color-ligtBlue;
+  border: solid $color-lightBlue 6px;
   border-radius: 10px;
 
-  .cardPicture {
-  }
-  .cardTitle {
-  }
-  .cardContent {
-    .techElement {
+  .technologyCard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 20px;
+
+    
+    .cardTitle {
+      @include textHeader3;
+
+      margin: 10px 0 20px 0;
+    }
+    .cardContent {
+      display: flex;
+      flex-wrap: wrap;
+
+      .techElement {
+        @include textTechnologyCard;
+        background-color: $color-lightBlue;
+        border-radius: 12px;
+
+        padding: 0 18px;
+        margin: 2px;
+        width: fit-content;
+      }
     }
   }
 }
