@@ -32,3 +32,9 @@
   font-family: "Nunito", Arial, sans-serif;
   font-weight: 400;
 }
+
+@mixin textButton {
+  font-size: 16px;
+  font-family: "Nunito", Arial, sans-serif;
+  font-weight: 700;
+}

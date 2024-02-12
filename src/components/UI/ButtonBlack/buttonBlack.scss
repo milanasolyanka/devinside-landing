@@ -1,15 +1,15 @@
 @import "./../../../assets/colors.scss";
 @import "./../../../assets/textStyles.scss";
 
-.buttonBlue {
-  background-color: $color-buttonBlue;
+.buttonBlack {
+  background-color: $color-black;
   color: $color-white;
   border: 0 none;
 
   cursor: pointer;
 
-  border-radius: 30px;
   height: 60px;
+  width: fit-content;
   padding-left: 60px;
   padding-right: 60px;
 
@@ -20,7 +20,7 @@
   transition: 0.3s;
 }
 
-.buttonBlue:hover {
+.buttonBlack:hover {
   background-color: $color-white;
-  color: $color-buttonBlue;
+  color: $color-black;
 }

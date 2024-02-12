@@ -6,14 +6,13 @@ import "./App.scss";
 import { Header } from "./components/Header";
 import { ButtonBlue } from "./components/UI/ButtonBlue";
 import { TechnologyCard } from "./components/TechnologyCard";
+import { ButtonBlack } from "./components/UI/ButtonBlack";
 
 function App() {
   return (
     <div className="App">
       <Header></Header>
       <div className="welcomeSection">
-        {/* <Parallax style={{ overflow: "hidden" }} pages={1}>
-        <ParallaxLayer speed={-0.1}> */}
         <div className="welcomeSection-wrapper">
           <div className="parallaxPic-wrapper">
             <img
@@ -33,8 +32,6 @@ function App() {
             </div>
           </div>
         </div>
-        {/* </ParallaxLayer>
-      </Parallax> */}
       </div>
       <div className="aboutSection">
         <div className="aboutSection-wrapper">
@@ -110,6 +107,29 @@ function App() {
       </div>
       <div className="stripWrapper">
         <div className="strip"></div>
+      </div>
+      <div className="productSection">
+        <div className="productSection-title">Наш продукт</div>
+        <div className="productSection-content">
+          <div className="content-picture">
+            <img src="/product.svg"></img>
+          </div>
+          <div className="content-text">
+            <div className="title">TenderChad</div>
+            <div className="text__line"></div>
+            <div className="description">
+              TenderChad - аналитическая система для оптимизации поиска и
+              анализа тендеров. Наш уникальный алгоритм оценки тендеров
+              основывается на информации из сопутствующей документации. Удобный
+              интерфейс позволяет быстро находить тендеры по ключевым
+              параметрам, а система берет на себя скучную работу по оценке
+              документации. Выберите только те тендеры, которые полностью
+              соответствуют вашим требованиям и сэкономьте свое время с
+              TenderChad.
+            </div>
+            <ButtonBlack value="Подробнее"></ButtonBlack>
+          </div>
+        </div>
       </div>
     </div>
   );
