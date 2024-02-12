@@ -1,0 +1,27 @@
+@mixin textHeader1 {
+  font-size: 52px;
+  line-height: 1.23;
+  font-family: "Nunito", Arial, sans-serif;
+  font-weight: 600;
+}
+
+@mixin textHeader2 {
+  font-size: 42px;
+  line-height: 1.23;
+  font-family: "Nunito", Arial, sans-serif;
+  font-weight: 600;
+}
+
+@mixin textHeader3 {
+  font-size: 20px;
+  line-height: 31px;
+  font-family: "Nunito", Arial, sans-serif;
+  font-weight: 700;
+}
+
+@mixin textDescripction {
+  font-size: 20px;
+  line-height: 1.55;
+  font-family: "Nunito", Arial, sans-serif;
+  font-weight: 300;
+}

@@ -1,0 +1,26 @@
+@import "./../../../assets/colors.scss";
+
+.buttonBlue {
+  background-color: $color-buttonBlue;
+  color: $color-white;
+  border: 0 none;
+
+  cursor: pointer;
+
+  border-radius: 30px;
+  height: 60px;
+  font-size: 16px;
+  padding-left: 60px;
+  padding-right: 60px;
+
+  text-align: center;
+  font-weight: 700;
+  font-family: "Nunito", Arial, sans-serif;
+
+  transition: 0.3s;
+}
+
+.buttonBlue:hover {
+  background-color: $color-white;
+  color: $color-buttonBlue;
+}
