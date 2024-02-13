@@ -1,12 +1,12 @@
 import React from "react";
 import "./App.scss";
 
-// import { Parallax, ParallaxLayer } from "@react-spring/parallax";
-
 import { Header } from "./components/Header";
-import { ButtonBlue } from "./components/UI/ButtonBlue";
 import { TechnologyCard } from "./components/TechnologyCard";
-import { ButtonBlack } from "./components/UI/ButtonBlack";
+import { MyButton } from "./components/UI/MyButton";
+
+import { serviceElements } from "./assets/services";
+import { ServiceCard } from "./components/ServiceCard";
 
 function App() {
   return (
@@ -28,7 +28,7 @@ function App() {
               Создаем веб-решения, которые работают для Вас!
             </div>
             <div className="button-wrapper">
-              <ButtonBlue value="Связаться с нами"></ButtonBlue>
+              <MyButton color="blue" value="Связаться с нами"></MyButton>
             </div>
           </div>
         </div>
@@ -112,7 +112,7 @@ function App() {
         <div className="productSection-title">Наш продукт</div>
         <div className="productSection-content">
           <div className="content-picture">
-            <img src="/product.svg"></img>
+            <img src="/product.svg" alt=""></img>
           </div>
           <div className="content-text">
             <div className="title">TenderChad</div>
@@ -127,9 +127,27 @@ function App() {
               соответствуют вашим требованиям и сэкономьте свое время с
               TenderChad.
             </div>
-            <ButtonBlack value="Подробнее"></ButtonBlack>
+            <MyButton color="black" value="Подробнее"></MyButton>
           </div>
         </div>
+      </div>
+      <div className="stripWrapper">
+        <div className="strip"></div>
+      </div>
+      <div className="servicesSection">
+        <div className="servicesSection__title">Наши услуги</div>
+        <div className="servicesSection__cards">
+          {serviceElements.map((element) => (
+            <ServiceCard
+              picture={element.picture}
+              title={element.title}
+              description={element.description}
+            ></ServiceCard>
+          ))}
+        </div>
+      </div>
+      <div className="stripWrapper">
+        <div className="strip"></div>
       </div>
     </div>
   );

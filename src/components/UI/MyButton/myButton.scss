@@ -1,0 +1,47 @@
+@import "./../../../assets/colors.scss";
+@import "./../../../assets/textStyles.scss";
+
+.iButton {
+  border: 0 none;
+
+  cursor: pointer;
+
+  width: fit-content;
+
+  text-align: center;
+
+  transition: 0.3s;
+}
+
+.default {
+  @include textButton;
+  height: 60px;
+  padding: 0 60px;
+}
+
+.small {
+  @include textButtonSmall;
+  height: 45px;
+  padding: 0 30px;
+}
+
+.black {
+  background-color: $color-black;
+  color: $color-white;
+}
+
+.blue {
+  border-radius: 30px;
+  background-color: $color-buttonBlue;
+  color: $color-white;
+}
+
+.black:hover {
+  background-color: $color-white;
+  color: $color-black;
+}
+
+.blue:hover {
+  background-color: $color-white;
+  color: $color-buttonBlue;
+}

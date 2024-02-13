@@ -1,0 +1,36 @@
+@import "./../../assets/colors.scss";
+@import "./../../assets/textStyles.scss";
+
+.serviceElement {
+  height: 390px;
+  width: 360px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 0 20px 8px 20px;
+
+  .picture-wrapper {
+    height: 200px;
+    width: 200px;
+
+    margin-bottom: 20px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .title {
+    @include textHeader3;
+    text-align: center;
+  }
+  .description {
+    @include textServiceCard;
+    text-align: center;
+
+    margin-top: 8px;
+    margin-bottom: 19px;
+  }
+}

@@ -1,11 +1,7 @@
 import React from "react";
 import "./technologyCard.scss";
+import { ITechnologyCard } from "../../types";
 
-interface ITechnologyCard {
-  picture: string;
-  title: string;
-  content: string[];
-}
 
 export const TechnologyCard: React.FC<ITechnologyCard> = ({
   picture,
