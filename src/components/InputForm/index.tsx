@@ -6,7 +6,11 @@ export const InputForm = () => {
   const initialValues = { email: "", phone: "", name: "", messageText: "" };
   const [values, setValues] = useState(initialValues);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>|React.ChangeEvent<HTMLTextAreaElement>) => {
+  const handleInputChange = (
+    e:
+      | React.ChangeEvent<HTMLInputElement>
+      | React.ChangeEvent<HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
 
     setValues({ ...values, [name]: value });
@@ -17,6 +21,7 @@ export const InputForm = () => {
       <MyInput
         value={values.email}
         setValue={handleInputChange}
+        placeholder="mycompany@co.com"
         label="E-mail"
         name="email"
         errorMessageState="invisible"
@@ -24,6 +29,7 @@ export const InputForm = () => {
       <MyInput
         value={values.name}
         setValue={handleInputChange}
+        placeholder="Сергей Иванов"
         label="Имя"
         name="name"
         errorMessageState="invisible"

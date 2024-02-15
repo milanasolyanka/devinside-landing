@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./myInput.scss";
 
 import InputMask from "react-input-mask";
@@ -28,6 +28,9 @@ export const MyInput: React.FC<IMyInput> = ({
   name = "",
   setValue,
 }) => {
+  const [placeholderVisibility, setplaceholderVisibility] =
+    useState<string>("");
+
   return (
     <div className="myInput">
       <label>{label}</label>
@@ -48,13 +51,19 @@ export const MyInput: React.FC<IMyInput> = ({
           name={name}
         ></textarea>
       ) : (
-        <input
-          type="text"
-          value={value}
-          onChange={(e) => setValue(e)}
-          className="inp"
-          name={name}
-        ></input>
+        <div className="inputBlock">
+          <input
+            type="text"
+            value={value}
+            onChange={(e) => setValue(e)}
+            className="inp"
+            name={name}
+            placeholder=""
+          ></input>
+          <div className={"placeholder" + " " + placeholderVisibility}>
+            {placeholder}
+          </div>
+        </div>
       )}
 
       <div className={"errorMessage" + " " + errorMessageState}>

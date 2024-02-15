@@ -46,3 +46,25 @@
     display: none;
   }
 }
+
+.inputBlock {
+  position: relative;
+
+  .placeholder {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+
+    @include textInputValue;
+    color: $color-gray;
+
+    pointer-events: none;
+
+    transition: all 0.2s;
+  }
+
+  .inp:focus + .placeholder,
+  .inp:not(:placeholder-shown) + .placeholder {
+    transform: scale(0.8) translateY(-20px) translateX(-20px);
+  }
+}
