@@ -1,16 +1,20 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./header.scss";
 
 export const Header = () => {
   const [headerColor, setHeaderColor] = useState("transparent");
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 0) {
-      setHeaderColor("opaque");
-    } else {
-      setHeaderColor("transparent");
-    }
-  });
+  useEffect(() => {
+    const parallaxWrapper: HTMLElement | null =
+      document.querySelector(".parallax-wrapper")!;
+    parallaxWrapper.addEventListener("scroll", () => {
+      if (parallaxWrapper.scrollTop > 0) {
+        setHeaderColor("opaque");
+      } else {
+        setHeaderColor("transparent");
+      }
+    });
+  }, []);
 
   return (
     <div className={"header" + " " + headerColor}>
