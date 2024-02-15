@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.scss";
 
 import { Header } from "./components/Header";
@@ -7,6 +7,7 @@ import { MyButton } from "./components/UI/MyButton";
 
 import { serviceElements } from "./assets/services";
 import { ServiceCard } from "./components/ServiceCard";
+import { InputForm } from "./components/InputForm";
 
 function App() {
   return (
@@ -148,6 +149,21 @@ function App() {
       </div>
       <div className="stripWrapper">
         <div className="strip"></div>
+      </div>
+      <div className="formSection">
+        <div className="formSection-title">Свяжитесь с нами</div>
+        <div className="formSection-form-container">
+          <InputForm></InputForm>
+          <div className="warning">
+            Нажимая на кнопку, вы соглашаетесь с нашими правилами обработки
+            данных
+          </div>
+        </div>
+      </div>
+      <div className="footer">
+        <div className="phoneNumber"></div>
+        <div></div>
+        <div></div>
       </div>
     </div>
   );

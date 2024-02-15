@@ -1,0 +1,48 @@
+@import "./../../../assets/colors.scss";
+@import "./../../../assets/textStyles.scss";
+
+.myInput {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  label {
+    @include textInputLabel;
+    color: $color-black;
+
+    padding-bottom: 5px;
+  }
+
+  .inp {
+    @include textInputValue;
+
+    height: 24px;
+    width: 720px;
+    line-height: 1.33;
+    padding: 26px 20px 10px 20px;
+    margin-bottom: 25px;
+
+    border: none;
+    border-radius: 10px;
+
+    background-color: $color-lightBlue;
+    color: $color-black;
+  }
+
+  .sizeable {
+    resize: vertical;
+    height: 72px;
+    padding-top: 20px;
+    margin-bottom: 0;
+  }
+
+  .phone {
+    padding: 18px 20px 18px;
+  }
+
+  .errormessage {
+  }
+  .invisible {
+    display: none;
+  }
+}
