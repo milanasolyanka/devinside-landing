@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import "./App.scss";
 
 import { Header } from "./components/Header";
@@ -15,13 +14,11 @@ function App() {
       <Header></Header>
       <div className="welcomeSection">
         <div className="welcomeSection-wrapper">
-          <div className="parallaxPic-wrapper">
-            <img
-              className="parallaxPic"
-              src="/parallaxPic.jpg"
-              alt="Картинка с крутыми работниками нашей компании"
-            />
-          </div>
+          <img
+            className="parallaxPic"
+            src="/parallaxPic.jpg"
+            alt="Картинка с крутыми работниками нашей компании"
+          />
           <div className="blackOpaque"></div>
           <div className="textAndButton">
             <div className="textName">DEVINSIDE</div>
