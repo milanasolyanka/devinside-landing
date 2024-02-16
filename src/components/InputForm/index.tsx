@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { MyInput } from "../UI/MyInput";
-import { MyButton } from "../UI/MyButton";
 
-import "./inputForm.scss";
+import CustomInput from "../UI/CustomInput";
+import CustomButton from "../UI/CustomButton";
 
-export const InputForm = () => {
+import "./input-form.scss";
+
+const InputForm = () => {
   // этот код следит за тем, чтобы значения во всех инпутах обновлялись. Хранит значения в values, обновляет их в handleInputChange
   const initialValues = { email: "", phone: "", name: "", messageText: "" };
   const [values, setValues] = useState(initialValues);
@@ -34,41 +35,43 @@ export const InputForm = () => {
 
   return (
     <div className={"inputForm" + " " + formVisible}>
-      <MyInput
+      <CustomInput
         value={values.email}
         setValue={handleInputChange}
         placeholder="mycompany@co.com"
         label="E-mail"
         name="email"
         errorMessageState="invisible"
-      ></MyInput>
-      <MyInput
+      ></CustomInput>
+      <CustomInput
         value={values.name}
         setValue={handleInputChange}
         placeholder="Сергей Иванов"
         label="Имя"
         name="name"
         errorMessageState="invisible"
-      ></MyInput>
-      <MyInput
+      ></CustomInput>
+      <CustomInput
         value={values.phone}
         setValue={handleInputChange}
         label="Телефон"
         type="phone"
         name="phone"
         errorMessageState="invisible"
-      ></MyInput>
-      <MyInput
+      ></CustomInput>
+      <CustomInput
         value={values.messageText}
         setValue={handleInputChange}
         label="Опишите Ваш проект"
         name="messageText"
         type="sizeable"
         errorMessageState="invisible"
-      ></MyInput>
+      ></CustomInput>
       <div style={{ marginTop: "30px", marginBottom: "10px" }}>
-        <MyButton value="Отправить" color="blue"></MyButton>
+        <CustomButton value="Отправить" color="blue"></CustomButton>
       </div>
     </div>
   );
 };
+
+export default InputForm;

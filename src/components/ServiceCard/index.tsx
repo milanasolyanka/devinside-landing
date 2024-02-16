@@ -1,9 +1,12 @@
 import React from "react";
-import "./serviceCard.scss";
-import { IServiceElement } from "../../types";
-import { MyButton } from "../UI/MyButton";
 
-export const ServiceCard: React.FC<IServiceElement> = ({
+import { IServiceElement } from "../../types";
+
+import CustomButton from "../UI/CustomButton";
+
+import "./service-card.scss";
+
+const ServiceCard: React.FC<IServiceElement> = ({
   picture,
   title,
   description,
@@ -15,7 +18,13 @@ export const ServiceCard: React.FC<IServiceElement> = ({
       </div>
       <div className="title">{title}</div>
       <div className="description">{description}</div>
-      <MyButton color="black" value="Свяжитесь с нами" size="small"></MyButton>
+      <CustomButton
+        color="black"
+        value="Свяжитесь с нами"
+        size="small"
+      ></CustomButton>
     </div>
   );
 };
+
+export default ServiceCard;

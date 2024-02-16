@@ -1,0 +1,30 @@
+@import "styles/colors.scss";
+@import "styles/textStyles.scss";
+
+.servicesSection {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: $color-blue;
+
+  margin-bottom: 90px;
+
+  .servicesSection__title {
+    @include textHeader1;
+    color: $color-black;
+
+    text-align: center;
+
+    padding-top: 30px;
+    padding-bottom: 45px;
+  }
+
+  .servicesSection__cards {
+    margin: 0 8px;
+    max-width: 1205px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

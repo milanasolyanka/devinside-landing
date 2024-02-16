@@ -15,3 +15,18 @@ export interface IButton {
   color: "black" | "blue";
   size?: "default" | "small";
 }
+
+export interface IInput {
+  label?: string;
+  placeholder?: string;
+  value: string;
+  type?: "phone" | "sizeable";
+  errorMesage?: string;
+  errorMessageState: "visible" | "invisible";
+  name: string;
+  setValue: (
+    e:
+      | React.ChangeEvent<HTMLInputElement>
+      | React.ChangeEvent<HTMLTextAreaElement>
+  ) => void;
+}

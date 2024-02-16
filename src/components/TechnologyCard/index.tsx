@@ -1,9 +1,10 @@
 import React from "react";
-import "./technologyCard.scss";
+
 import { ITechnologyCard } from "../../types";
 
+import "./technology-card.scss";
 
-export const TechnologyCard: React.FC<ITechnologyCard> = ({
+const TechnologyCard: React.FC<ITechnologyCard> = ({
   picture,
   title,
   content,
@@ -22,3 +23,5 @@ export const TechnologyCard: React.FC<ITechnologyCard> = ({
     </div>
   );
 };
+
+export default TechnologyCard;

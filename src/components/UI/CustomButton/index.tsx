@@ -1,8 +1,10 @@
 import React from "react";
-import "./myButton.scss";
+
 import { IButton } from "../../../types";
 
-export const MyButton: React.FC<IButton> = ({
+import "./custom-button.scss";
+
+const CustomButton: React.FC<IButton> = ({
   value,
   color,
   size = "default",
@@ -11,3 +13,5 @@ export const MyButton: React.FC<IButton> = ({
     <button className={"iButton" + " " + color + " " + size}>{value}</button>
   );
 };
+
+export default CustomButton;

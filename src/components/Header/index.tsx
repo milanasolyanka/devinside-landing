@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+
 import "./header.scss";
 
-export const Header = () => {
+const Header = () => {
   const [headerColor, setHeaderColor] = useState("transparent");
 
   useEffect(() => {
@@ -32,3 +33,5 @@ export const Header = () => {
     </div>
   );
 };
+
+export default Header;

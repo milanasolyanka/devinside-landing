@@ -1,24 +1,12 @@
-import React, { useState } from "react";
-import "./myInput.scss";
+import React from "react";
 
 import InputMask from "react-input-mask";
 
-interface IMyInput {
-  label?: string;
-  placeholder?: string;
-  value: string;
-  type?: "phone" | "sizeable";
-  errorMesage?: string;
-  errorMessageState: "visible" | "invisible";
-  name: string;
-  setValue: (
-    e:
-      | React.ChangeEvent<HTMLInputElement>
-      | React.ChangeEvent<HTMLTextAreaElement>
-  ) => void;
-}
+import { IInput } from "../../../types";
 
-export const MyInput: React.FC<IMyInput> = ({
+import "./custom-input.scss";
+
+const CustomInput: React.FC<IInput> = ({
   label,
   placeholder,
   value,
@@ -28,9 +16,6 @@ export const MyInput: React.FC<IMyInput> = ({
   name = "",
   setValue,
 }) => {
-  const [placeholderVisibility, setplaceholderVisibility] =
-    useState<string>("");
-
   return (
     <div className="myInput">
       <label>{label}</label>
@@ -60,9 +45,7 @@ export const MyInput: React.FC<IMyInput> = ({
             name={name}
             placeholder=""
           ></input>
-          <div className={"placeholder" + " " + placeholderVisibility}>
-            {placeholder}
-          </div>
+          <div className="placeholder">{placeholder}</div>
         </div>
       )}
 
@@ -72,3 +55,5 @@ export const MyInput: React.FC<IMyInput> = ({
     </div>
   );
 };
+
+export default CustomInput;

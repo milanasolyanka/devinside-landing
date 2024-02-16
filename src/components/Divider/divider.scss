@@ -1,0 +1,22 @@
+@import "styles/colors.scss";
+@import "styles/textStyles.scss";
+
+.stripWrapper {
+  display: flex;
+  justify-content: center;
+  background-color: $color-blue;
+
+  padding: 36px 0;
+  width: 100%;
+
+  .strip {
+    height: 1px;
+    width: 100%;
+    max-width: 1120px;
+
+    padding: 0 20px;
+
+    opacity: 0.2;
+    background-color: $color-black;
+  }
+}

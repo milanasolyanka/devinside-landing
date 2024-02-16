@@ -1,0 +1,34 @@
+@import "styles/colors.scss";
+@import "styles/textStyles.scss";
+
+.technologySection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: $color-blue;
+
+  .technologySection-title {
+    @include textHeader1;
+    color: $color-black;
+
+    padding-top: 38px;
+    padding-bottom: 48px;
+
+    display: flex;
+    justify-content: center;
+  }
+  .technologySection-cards {
+    display: flex;
+    justify-content: center;
+
+    margin: 12px 0;
+
+    .cards-container {
+      display: flex;
+      justify-content: space-evenly;
+      width: 100%;
+      max-width: 1200px;
+      flex-wrap: wrap;
+    }
+  }
+}
