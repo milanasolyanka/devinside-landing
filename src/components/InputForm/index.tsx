@@ -34,7 +34,7 @@ const InputForm = () => {
   }, []);
 
   return (
-    <div className={"inputForm" + " " + formVisible}>
+    <div className={`inputForm ${formVisible}`}>
       <CustomInput
         value={values.email}
         setValue={handleInputChange}
@@ -67,7 +67,7 @@ const InputForm = () => {
         type="sizeable"
         errorMessageState="invisible"
       ></CustomInput>
-      <div style={{ marginTop: "30px", marginBottom: "10px" }}>
+      <div className="inputForm-buttonWrapper">
         <CustomButton value="Отправить" color="blue"></CustomButton>
       </div>
     </div>

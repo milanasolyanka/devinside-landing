@@ -49,9 +49,7 @@ const CustomInput: React.FC<IInput> = ({
         </div>
       )}
 
-      <div className={"errorMessage" + " " + errorMessageState}>
-        {errorMesage}
-      </div>
+      <div className={`errorMessage ${errorMessageState}`}>{errorMesage}</div>
     </div>
   );
 };

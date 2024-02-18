@@ -18,7 +18,7 @@ const Header = () => {
   }, []);
 
   return (
-    <div className={"header" + " " + headerColor}>
+    <div className={`header ${headerColor}`}>
       <div className="header__holder">
         <div className="header__logo">DEVINSIDE</div>
         <div className="header__menu">

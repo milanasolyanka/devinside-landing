@@ -9,9 +9,7 @@ const CustomButton: React.FC<IButton> = ({
   color,
   size = "default",
 }) => {
-  return (
-    <button className={"iButton" + " " + color + " " + size}>{value}</button>
-  );
+  return <button className={`"iButton ${color} ${size}`}>{value}</button>;
 };
 
 export default CustomButton;
