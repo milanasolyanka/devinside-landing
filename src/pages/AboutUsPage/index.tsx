@@ -1,11 +1,12 @@
 import { aboutUsText } from "data/aboutUsText";
+
 import devinsideLogo from "assets/devinside.png";
 
 import "./about-us-page.scss";
 
 const AboutUsPage = () => {
   return (
-    <div className="aboutSection">
+    <div className="aboutSection" id="about">
       <div className="aboutSection-wrapper">
         <div className="aboutSection-text">
           <div className="aboutSection-text__title">О нас</div>

@@ -4,7 +4,7 @@ import "./contact-page.scss";
 
 const ContactPage = () => {
   return (
-    <div className="formSection">
+    <div className="formSection" id="form">
       <div className="formSection-title">Свяжитесь с нами</div>
       <div className="formSection-form-container">
         <InputForm></InputForm>

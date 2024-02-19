@@ -13,7 +13,7 @@ import "./App.scss";
 function App() {
   return (
     <div className="App">
-      <Header></Header>
+      <Header />
       <div className="parallax-wrapper">
         <WelcomePage></WelcomePage>
         <AboutUsPage></AboutUsPage>

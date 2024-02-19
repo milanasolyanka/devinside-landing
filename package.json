@@ -44,7 +44,9 @@
   },
   "devDependencies": {
     "@types/react-input-mask": "^3.0.5",
+    "@types/react-router-hash-link": "^2.4.9",
     "file-loader": "^6.2.0",
+    "react-router-hash-link": "^2.4.3",
     "sass": "^1.70.0"
   }
 }

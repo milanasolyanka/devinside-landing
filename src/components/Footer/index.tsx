@@ -8,7 +8,7 @@ import "./footer.scss";
 
 const Footer = () => {
   return (
-    <div className="footer">
+    <div className="footer" id="contacts">
       <div className="footer-left">
         <div className="footer-component">+7 914 455 14 14</div>
         <div className="footer-component">devinside.info@gmail.com</div>

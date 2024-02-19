@@ -30,3 +30,8 @@ export interface IInput {
       | React.ChangeEvent<HTMLTextAreaElement>
   ) => void;
 }
+
+interface ICustomNavLink {
+  to: string;
+  linkText?: string;
+}

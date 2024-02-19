@@ -13,7 +13,6 @@
   .header__holder {
     padding: 0 40px;
     max-width: 1200px;
-    // height: 100%;
 
     display: flex;
     flex-direction: row;
@@ -26,9 +25,6 @@
 
     .header__logo {
       cursor: pointer;
-
-      // display: flex;
-      // align-items: center;
 
       font-weight: 600;
       letter-spacing: 0.03em;
@@ -51,10 +47,16 @@
 
       line-height: 99px;
 
-      .menu-item {
+      a {
         cursor: pointer;
+        text-decoration: none;
+        color: inherit;
         padding-top: 1px;
         margin-left: 20px;
+      }
+
+      .selectedSection {
+        color: $color-gray;
       }
     }
   }
@@ -68,5 +70,5 @@
 .header.opaque {
   color: $color-black;
   background-color: $color-white;
-  box-shadow: rgba(0,0,0,.13) 0 4px 16px;
+  box-shadow: rgba(0, 0, 0, 0.13) 0 4px 16px;
 }
