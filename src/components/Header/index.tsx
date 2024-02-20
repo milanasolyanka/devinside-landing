@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 import CustomNavLink from "components/UI/CustomNavLink";
+
+import headerData from "data/headerData";
 
 import "./header.scss";
 
@@ -23,20 +26,19 @@ const Header = () => {
   return (
     <div className={`header ${headerColor}`}>
       <div className="header__holder">
-        <div className="header__logo">DEVINSIDE</div>
+        <div className="header__logo">
+          <Link to="/" reloadDocument>
+            DEVINSIDE
+          </Link>
+        </div>
         <div className="header__menu">
-          <CustomNavLink to="#about" linkText="О нас" />
-          <CustomNavLink to="#techs" linkText="Наш стек технологий" />
-          <CustomNavLink to="#product" linkText="Наш продукт" />
-          <CustomNavLink to="#services" linkText="Наши услуги" />
-          <CustomNavLink to="#form" linkText="Связь" />
-          <CustomNavLink to="#contacts" linkText="Контакты" />
-          {/* <div className="menu-item">О нас</div>
-          <div className="menu-item">Наш стек технологий</div>
-          <div className="menu-item">Наш продукт</div>
-          <div className="menu-item">Наши услуги</div>
-          <div className="menu-item">Связь</div>
-          <div className="menu-item">Контакты</div> */}
+          {headerData.map((item) => (
+            <CustomNavLink
+              key={item.link}
+              to={item.link}
+              linkText={item.linkText}
+            />
+          ))}
         </div>
       </div>
     </div>
