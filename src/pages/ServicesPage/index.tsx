@@ -6,7 +6,7 @@ import "./services-page.scss";
 
 const ServicesPage = () => {
   return (
-    <div className="servicesSection" id="services">
+    <div className="servicesSection">
       <div className="servicesSection__title">Наши услуги</div>
       <div className="servicesSection__cards">
         {serviceElements.map((element) => (

@@ -7,7 +7,7 @@ import "./technology-page.scss";
 
 const TechnologyPage = () => {
   return (
-    <div className="technologySection" id="techs">
+    <div className="technologySection">
       <div className="technologySection-title">Наш стек технологий</div>
       <div className="technologySection-cards">
         <div className="cards-container">

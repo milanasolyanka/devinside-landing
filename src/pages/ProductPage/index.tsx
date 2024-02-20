@@ -6,7 +6,7 @@ import "./product-page.scss";
 
 const ProductPage = () => {
   return (
-    <div className="productSection" id="product">
+    <div className="productSection">
       <div className="productSection-title">Наш продукт</div>
       <div className="productSection-content">
         <div className="content-picture">

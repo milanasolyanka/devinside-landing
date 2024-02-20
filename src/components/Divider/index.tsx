@@ -1,8 +1,8 @@
 import "./divider.scss";
 
-const Divider = () => {
+const Divider: React.FC<{ id?: string }> = ({ id = "" }) => {
   return (
-    <div className="stripWrapper">
+    <div className="stripWrapper" id={id}>
       <div className="strip"></div>
     </div>
   );

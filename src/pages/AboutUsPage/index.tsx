@@ -6,7 +6,7 @@ import "./about-us-page.scss";
 
 const AboutUsPage = () => {
   return (
-    <div className="aboutSection" id="about">
+    <div className="aboutSection">
       <div className="aboutSection-wrapper">
         <div className="aboutSection-text">
           <div className="aboutSection-text__title">О нас</div>

@@ -16,14 +16,15 @@ function App() {
       <Header />
       <div className="parallax-wrapper">
         <WelcomePage></WelcomePage>
+        <Divider id="about"></Divider>
         <AboutUsPage></AboutUsPage>
-        <Divider></Divider>
+        <Divider id="techs"></Divider>
         <TechnologyPage></TechnologyPage>
-        <Divider></Divider>
+        <Divider id="product"></Divider>
         <ProductPage></ProductPage>
-        <Divider></Divider>
+        <Divider id="services"></Divider>
         <ServicesPage></ServicesPage>
-        <Divider></Divider>
+        <Divider id="form"></Divider>
         <ContactPage></ContactPage>
         <Footer></Footer>
       </div>
