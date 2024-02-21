@@ -1,8 +1,8 @@
 import React from "react";
 
-import { IServiceElement } from "../../types";
-
 import CustomButton from "../UI/CustomButton";
+import scrollToForm from "utils/scrollToForm";
+import { IServiceElement } from "../../types";
 
 import "./service-card.scss";
 
@@ -22,6 +22,7 @@ const ServiceCard: React.FC<IServiceElement> = ({
         color="black"
         value="Свяжитесь с нами"
         size="small"
+        onClick={scrollToForm}
       ></CustomButton>
     </div>
   );

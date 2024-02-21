@@ -1,5 +1,6 @@
 import CustomButton from "components/UI/CustomButton";
 
+import scrollToForm from "utils/scrollToForm";
 import parallaxPic from "assets/parallaxPic.jpg";
 
 import "./welcome-page.scss";
@@ -15,7 +16,11 @@ const WelcomePage = () => {
           Создаем веб-решения, которые работают для Вас!
         </div>
         <div className="button-wrapper">
-          <CustomButton color="blue" value="Связаться с нами"></CustomButton>
+          <CustomButton
+            color="blue"
+            value="Связаться с нами"
+            onClick={scrollToForm}
+          ></CustomButton>
         </div>
       </div>
     </div>

@@ -16,7 +16,11 @@ const ProductPage = () => {
           <div className="title">TenderChad</div>
           <div className="text__line"></div>
           <div className="description">{productText}</div>
-          <CustomButton color="black" value="Подробнее"></CustomButton>
+          <CustomButton
+            color="black"
+            value="Подробнее"
+            onClick={() => window.open("https://tenderchad.ru/", "_blank")}
+          ></CustomButton>
         </div>
       </div>
     </div>

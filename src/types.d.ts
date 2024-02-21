@@ -14,6 +14,7 @@ export interface IButton {
   value: string;
   color: "black" | "blue";
   size?: "default" | "small";
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
 export interface IInput {
