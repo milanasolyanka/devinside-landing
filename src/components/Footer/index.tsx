@@ -19,13 +19,25 @@ const Footer = () => {
       <div className="footer-right">
         <div className="footer-title">DEVINSIDE</div>
         <div className="footer-icons">
-          <a href={socialMediaLinks.vkLink}>
+          <a
+            href={socialMediaLinks.vkLink}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src={vkLogo} alt="Иконка ВК" />
           </a>
-          <a href={socialMediaLinks.telegramLink}>
+          <a
+            href={socialMediaLinks.telegramLink}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src={telegramLogo} alt="Иконка Телеграм" />
           </a>
-          <a href={socialMediaLinks.whatsappLink}>
+          <a
+            href={socialMediaLinks.whatsappLink}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src={whatsappLogo} alt="Иконка Ватсап" />
           </a>
         </div>
