@@ -23,7 +23,7 @@ export interface IInput {
   value: string;
   type?: "phone" | "sizeable";
   errorMesage?: string;
-  errorMessageState: "visible" | "invisible";
+  errorMessageState?: string;
   name: string;
   setValue: (
     e:

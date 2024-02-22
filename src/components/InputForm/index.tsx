@@ -33,6 +33,49 @@ const InputForm = () => {
     });
   }, []);
 
+  // код для проверки значений в инпутах
+  const initialErrorVisibilities = {
+    email: "invisible",
+    name: "invisible",
+    phone: "invisible",
+  };
+  const [errorVisibilities, setErrorVisibilities] = useState(
+    initialErrorVisibilities
+  );
+
+  const checkInputs = () => {
+    let hasVisibleErrors = false;
+
+    if (values.email === "") {
+      errorVisibilities.email = "visible";
+      hasVisibleErrors = true;
+    } else {
+      errorVisibilities.email = "invisible";
+    }
+
+    if (values.name === "") {
+      errorVisibilities.name = "visible";
+      hasVisibleErrors = true;
+    } else {
+      errorVisibilities.name = "invisible";
+    }
+
+    if (!values.phone || !/^\d{11}$/.test(values.phone)) {
+      errorVisibilities.phone = "visible";
+      hasVisibleErrors = true;
+    } else {
+      errorVisibilities.phone = "invisible";
+    }
+
+    console.log(values.email, values.name, values.phone, values.messageText);
+
+    if (!hasVisibleErrors) {
+      // sendMessage(values.email, values.name, values.phone, values.messageText);
+      console.log("Ща бы отправила инфу на сервер");
+    }
+    setErrorVisibilities({ ...errorVisibilities });
+  };
+
   return (
     <div className={`inputForm ${formVisible}`}>
       <CustomInput
@@ -41,7 +84,7 @@ const InputForm = () => {
         placeholder="mycompany@co.com"
         label="E-mail"
         name="email"
-        errorMessageState="invisible"
+        errorMessageState={errorVisibilities.email}
       ></CustomInput>
       <CustomInput
         value={values.name}
@@ -49,7 +92,7 @@ const InputForm = () => {
         placeholder="Сергей Иванов"
         label="Имя"
         name="name"
-        errorMessageState="invisible"
+        errorMessageState={errorVisibilities.name}
       ></CustomInput>
       <CustomInput
         value={values.phone}
@@ -57,7 +100,7 @@ const InputForm = () => {
         label="Телефон"
         type="phone"
         name="phone"
-        errorMessageState="invisible"
+        errorMessageState={errorVisibilities.phone}
       ></CustomInput>
       <CustomInput
         value={values.messageText}
@@ -65,10 +108,13 @@ const InputForm = () => {
         label="Опишите Ваш проект"
         name="messageText"
         type="sizeable"
-        errorMessageState="invisible"
       ></CustomInput>
       <div className="inputForm-buttonWrapper">
-        <CustomButton value="Отправить" color="blue"></CustomButton>
+        <CustomButton
+          value="Отправить"
+          color="blue"
+          onClick={checkInputs}
+        ></CustomButton>
       </div>
     </div>
   );

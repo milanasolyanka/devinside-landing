@@ -70,6 +70,12 @@
   font-weight: 300;
 }
 
+@mixin textInputError {
+font-size: 13px;
+font-family: "Nunito", Arial, sans-serif;
+font-weight: 400;
+}
+
 @mixin textButton {
   font-size: 16px;
   font-family: "Nunito", Arial, sans-serif;

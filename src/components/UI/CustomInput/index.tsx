@@ -11,7 +11,7 @@ const CustomInput: React.FC<IInput> = ({
   placeholder,
   value,
   type = "default",
-  errorMesage = "Обязательное поле",
+  errorMesage = "Пожалуйста, заполните все обязательные поля",
   errorMessageState = "invisible",
   name = "",
   setValue,
@@ -25,14 +25,18 @@ const CustomInput: React.FC<IInput> = ({
           value={value}
           onChange={(e) => setValue(e)}
           placeholder="+7 (999) 999 99 99"
-          className="inp phone"
+          className={`inp phone ${
+            errorMessageState === "visible" ? "error" : ""
+          }`}
           name={name}
         ></InputMask>
       ) : type === "sizeable" ? (
         <textarea
           value={value}
           onChange={(e) => setValue(e)}
-          className="inp sizeable"
+          className={`inp sizeable ${
+            errorMessageState === "visible" ? "error" : ""
+          }`}
           name={name}
         ></textarea>
       ) : (
@@ -41,7 +45,7 @@ const CustomInput: React.FC<IInput> = ({
             type="text"
             value={value}
             onChange={(e) => setValue(e)}
-            className="inp"
+            className={`inp ${errorMessageState === "visible" ? "error" : ""}`}
             name={name}
             placeholder=""
           ></input>
