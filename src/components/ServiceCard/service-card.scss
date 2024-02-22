@@ -35,3 +35,28 @@
     margin-bottom: 19px;
   }
 }
+
+@media (max-width: 1180px) {
+  .serviceElement {
+    height: 330px;
+    width: 330px;
+
+    // margin: 0 20px 8px 20px;
+
+    .picture-wrapper {
+      height: 160px;
+      width: 160px;
+
+      margin-bottom: 20px;
+    }
+    .title {
+      @include textHeader3;
+    }
+    .description {
+      @include textServiceCardSmall;
+
+      // margin-top: 8px;
+      // margin-bottom: 19px;
+    }
+  }
+}

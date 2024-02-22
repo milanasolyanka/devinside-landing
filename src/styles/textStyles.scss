@@ -21,6 +21,13 @@
   font-weight: 700;
 }
 
+@mixin textHeaderSmall {
+  font-size: 38px;
+  line-height: 1.23;
+  font-family: "Nunito", Arial, sans-serif;
+  font-weight: 600;
+}
+
 @mixin textDescription {
   font-size: 20px;
   line-height: 1.55;
@@ -71,9 +78,9 @@
 }
 
 @mixin textInputError {
-font-size: 13px;
-font-family: "Nunito", Arial, sans-serif;
-font-weight: 400;
+  font-size: 13px;
+  font-family: "Nunito", Arial, sans-serif;
+  font-weight: 400;
 }
 
 @mixin textButton {

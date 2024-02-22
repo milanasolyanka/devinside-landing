@@ -75,3 +75,11 @@
     transform: scale(0.8) translateY(-20px) translateX(-20px);
   }
 }
+
+@media (max-width: 1180px) {
+  .myInput {
+    .inp {
+      width: 560px;
+    }
+  }
+}

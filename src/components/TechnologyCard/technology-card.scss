@@ -5,6 +5,8 @@
   width: 360px;
   height: 345px;
 
+  margin-bottom: 20px;
+
   border: solid $color-lightBlue 6px;
   border-radius: 10px;
 
@@ -15,7 +17,6 @@
 
     margin: 20px;
 
-    
     .cardTitle {
       @include textHeader3;
 
