@@ -10,6 +10,10 @@
 
   transition: all 0.4s ease;
 
+  .sidebar-toggler {
+    display: none;
+  }
+
   a {
     cursor: pointer;
     text-decoration: none;
@@ -66,10 +70,17 @@
 .header.transparent {
   color: $color-white;
   background-color: transparent;
+
+  .sidebar-toggler {
+    background-color: transparent;
+  }
 }
 
 .header.opaque {
   color: $color-black;
   background-color: $color-white;
   box-shadow: rgba(0, 0, 0, 0.13) 0 4px 16px;
+  .sidebar-toggler {
+    background-color: $color-black;
+  }
 }

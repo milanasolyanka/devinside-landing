@@ -1,0 +1,104 @@
+@import "../../styles/colors.scss";
+
+@media (max-width: 1024px) {
+  .header {
+    height: 50px;
+
+    transition: all 0.4s ease;
+
+    .sidebar-toggler {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 50px;
+      width: 50px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      transition: all 0.4s ease;
+    }
+
+    .header__holder {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+      font-family: "Nunito", Arial, sans-serif;
+
+      .header__logo {
+        line-height: 50px;
+        font-weight: 600;
+        letter-spacing: 0.03em;
+        font-size: 16px;
+      }
+
+      .header__menu {
+        position: fixed;
+        top: 50px;
+        left: 0;
+        height: calc(100vh - 50px);
+        width: 100%;
+        z-index: 999;
+        background-color: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(10px);
+
+        flex-direction: column;
+        justify-content: center;
+
+        a {
+          height: 192px;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+
+          text-transform: uppercase;
+          letter-spacing: 0.01em;
+          color: $color-black;
+          letter-spacing: 0.1em;
+          font-size: 4vh;
+          line-height: 12vh;
+          font-family: "Nunito", Arial, sans-serif;
+          font-weight: 600;
+        }
+
+        .selectedSection {
+          color: $color-black;
+        }
+      }
+
+      .sidebar-invisible {
+        animation: slideLeft 0.4s ease-in-out 0s forwards;
+      }
+      .sidebar-visible {
+        display: flex;
+        animation: slideRight 0.4s ease-in-out 0s forwards;
+      }
+    }
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-100vw);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(-100vw);
+  }
+}
