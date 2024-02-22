@@ -46,14 +46,14 @@ const InputForm = () => {
   const checkInputs = () => {
     let hasVisibleErrors = false;
 
-    if (values.email === "") {
+    if (!values.email) {
       errorVisibilities.email = "visible";
       hasVisibleErrors = true;
     } else {
       errorVisibilities.email = "invisible";
     }
 
-    if (values.name === "") {
+    if (!values.name) {
       errorVisibilities.name = "visible";
       hasVisibleErrors = true;
     } else {
@@ -67,10 +67,15 @@ const InputForm = () => {
       errorVisibilities.phone = "invisible";
     }
 
-    console.log(values.email, values.name, values.phone, values.messageText);
+    console.log(
+      values.email,
+      values.name,
+      values.phone.replace(/\D/g, ""),
+      values.messageText
+    );
 
     if (!hasVisibleErrors) {
-      // sendMessage(values.email, values.name, values.phone, values.messageText);
+      // sendMessage(values.email, values.name, values.phone.replace(/\D/g, ""), values.messageText);
       console.log("Ща бы отправила инфу на сервер");
     }
     setErrorVisibilities({ ...errorVisibilities });
