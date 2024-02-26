@@ -3,6 +3,7 @@ import { aboutUsText } from "data/aboutUsText";
 import devinsideLogo from "assets/devinside.png";
 
 import "./about-us-page.scss";
+import "./about-us-page-media.scss";
 
 const AboutUsPage = () => {
   return (

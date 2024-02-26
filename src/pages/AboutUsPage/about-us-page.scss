@@ -2,7 +2,7 @@
 @import "styles/textStyles.scss";
 
 .aboutSection {
-  height: 770px;
+  // height: 770px;
   background-color: $color-blue;
 
   display: flex;
@@ -67,32 +67,4 @@
   }
 }
 
-@media (max-width: 1180px) {
-  .aboutSection {
-    .aboutSection-wrapper {
-      max-width: 960px;
-      width: 100%;
 
-      .aboutSection-text {
-        margin: 0;
-        max-width: 460px;
-
-        .aboutSection-text__title {
-          @include textHeaderSmall;
-        }
-        .aboutSection-text__description {
-          @include textDescriptionSmall;
-        }
-      }
-      .aboutSection-picture {
-        margin: 0 10px;
-
-        max-width: 460px;
-
-        img {
-          height: 460px;
-        }
-      }
-    }
-  }
-}

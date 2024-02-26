@@ -3,6 +3,7 @@ import CustomButton from "components/UI/CustomButton";
 import { productText } from "data/productText";
 
 import "./product-page.scss";
+import "./product-page-media.scss";
 
 const ProductPage = () => {
   return (

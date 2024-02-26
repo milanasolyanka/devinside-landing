@@ -66,34 +66,4 @@
     }
   }
 
-  @media (max-width: 1180px) {
-    .productSection-content {
-      .content-picture {
-        height: 460px;
-        margin: 0;
-
-        img {
-          height: 460px;
-          width: 460px;
-        }
-      }
-      .content-text {
-        max-width: 460px;
-        height: 560px;
-
-        .title {
-          @include textHeaderSmall;
-
-          margin-bottom: 16px;
-        }
-
-        .description {
-          @include textDescriptionSmall;
-
-          margin-top: 28px;
-          margin-bottom: 60px;
-        }
-      }
-    }
-  }
 }
