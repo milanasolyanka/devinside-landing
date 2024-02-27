@@ -36,12 +36,8 @@
   .sizeable {
     resize: vertical;
     height: 72px;
-    padding-top: 20px;
+    // padding-top: 20px;
     margin-bottom: 0;
-  }
-
-  .phone {
-    padding: 18px 20px 18px;
   }
 
   .errorMessage {
@@ -72,7 +68,12 @@
 
   .inp:focus + .placeholder,
   .inp:not(:placeholder-shown) + .placeholder {
-    transform: scale(0.8) translateY(-20px) translateX(-20px);
+    transform: scale(0.8) translateY(-20px) translateX(-5px);
+  }
+
+  .sizeable:focus + .placeholder,
+  .sizeable:not(:placeholder-shown) + .placeholder {
+    transform: scale(0.8) translateY(-20px) translateX(-18px);
   }
 }
 

@@ -86,23 +86,21 @@ const InputForm = () => {
       <CustomInput
         value={values.email}
         setValue={handleInputChange}
-        placeholder="mycompany@co.com"
-        label="E-mail"
+        placeholder="E-mail"
         name="email"
         errorMessageState={errorVisibilities.email}
       ></CustomInput>
       <CustomInput
         value={values.name}
         setValue={handleInputChange}
-        placeholder="Сергей Иванов"
-        label="Имя"
+        placeholder="Имя"
         name="name"
         errorMessageState={errorVisibilities.name}
       ></CustomInput>
       <CustomInput
         value={values.phone}
         setValue={handleInputChange}
-        label="Телефон"
+        placeholder="Телефон"
         type="phone"
         name="phone"
         errorMessageState={errorVisibilities.phone}
@@ -110,7 +108,7 @@ const InputForm = () => {
       <CustomInput
         value={values.messageText}
         setValue={handleInputChange}
-        label="Опишите Ваш проект"
+        placeholder="Опишите Ваш проект"
         name="messageText"
         type="sizeable"
       ></CustomInput>

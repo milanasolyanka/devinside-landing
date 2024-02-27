@@ -20,25 +20,30 @@ const CustomInput: React.FC<IInput> = ({
     <div className="myInput">
       <label>{label}</label>
       {type === "phone" ? (
-        <InputMask
-          mask="+7 (999) 999 99 99"
-          value={value}
-          onChange={(e) => setValue(e)}
-          placeholder="+7 (999) 999 99 99"
-          className={`inp phone ${
-            errorMessageState === "visible" ? "error" : ""
-          }`}
-          name={name}
-        ></InputMask>
+        <div className="inputBlock">
+          <InputMask
+            mask="+7 (999) 999 99 99"
+            value={value}
+            onChange={(e) => setValue(e)}
+            placeholder=""
+            className={`inp ${errorMessageState === "visible" ? "error" : ""}`}
+            name={name}
+          ></InputMask>
+          <div className="placeholder">{placeholder}</div>
+        </div>
       ) : type === "sizeable" ? (
-        <textarea
-          value={value}
-          onChange={(e) => setValue(e)}
-          className={`inp sizeable ${
-            errorMessageState === "visible" ? "error" : ""
-          }`}
-          name={name}
-        ></textarea>
+        <div className="inputBlock">
+          <textarea
+            value={value}
+            onChange={(e) => setValue(e)}
+            className={`inp sizeable ${
+              errorMessageState === "visible" ? "error" : ""
+            }`}
+            name={name}
+            placeholder=""
+          ></textarea>
+          <div className="placeholder">{placeholder}</div>
+        </div>
       ) : (
         <div className="inputBlock">
           <input
