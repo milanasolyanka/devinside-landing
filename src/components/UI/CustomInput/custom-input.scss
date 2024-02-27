@@ -77,10 +77,18 @@
   }
 }
 
-@media (max-width: 1180px) {
+@media (660px <= width <= 1180px) {
   .myInput {
     .inp {
       width: 560px;
+    }
+  }
+}
+
+@media (width < 660px) {
+  .myInput {
+    .inp {
+      width: 400px;
     }
   }
 }
